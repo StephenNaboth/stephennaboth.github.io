@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-79254642-5');
+  </script>
+
+  <meta charset="utf-8">
+  <title>Stephen Naboth | Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description"
+    content="Welcome to Stephen Naboth's homepage. I'm a PhD student specializing in [your field].">
+  <meta name="keywords"
+    content="PhD,Research,Stephen Naboth,[your keywords here]">
+  <meta name="author" content="Stephen Naboth">
+  <link rel="icon" href="img/logo/Home_single_small.png">
+
+  <!-- Control appearance when shared by social media -->
+  <meta property="og:title" content="Stephen Naboth | PhD Student" />
+  <meta property="og:image" content="img/logo/Home_single_medium.png" />
+  <meta property="og:description"
+    content="Welcome to Stephen Naboth's homepage. I'm a PhD student specializing in [your field]." />
+  <meta property='og:url' content="https://www.yan-holtz.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.css" rel="stylesheet">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <meta name="theme-color" content="#ffffff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <style>
+    /* Add this style section in the head or your CSS file */
+    .social-buttons {
+      margin: 20px 0;
+    }
+
+    .list-inline-item {
+      margin: 0 15px;  /* Increased spacing between buttons */
+    }
+
+    .list-inline-item a {
+      display: inline-block;
+      width: 50px;     /* Fixed width for the button area */
+      height: 50px;    /* Fixed height for the button area */
+      border-radius: 50%;
+      background-color: #007bff;  /* Primary blue color */
+      text-align: center;
+      line-height: 50px;  /* Vertically center the icon */
+      transition: all 0.3s ease;
+    }
+
+    .list-inline-item a:hover {
+      background-color: #0056b3;  /* Darker blue on hover */
+      transform: translateY(-3px);  /* Slight lift effect on hover */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);  /* Shadow effect on hover */
+    }
+
+    .list-inline-item a i {
+      color: white;  /* Icon color */
+      vertical-align: middle;
+    }
+
+    /* Override any existing color styles */
+    .list-inline-item a i.fa-github {
+      color: white !important;
+    }
+  </style>
+
+</head>
+
+<body id="page-top">
+
+
+
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="js-scroll-trigger" href="#page-top">
+        HOME
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#description">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- =======================  LANDING SECTION ======================= -->
+
+
+  <header class="masthead">
+    <div id="particles-js"></div>
+    <div class="textlanding">
+      <p style="display:inline; font-size: 35px; padding-left: 30px">STEPHEN</p>
+      <img width="90px" style="display:inline; margin-bottom: 20px; margin-right: 10px; margin-left: 10px"
+        src="img/logo/icons8-logo-ios-17-outlined/logo-250.png">
+      <p style="display:inline; font-size: 35px">NABOTH</p>
+      <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
+      <br>
+      <ul class="list-inline social-buttons">
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com/nkyalogos/">
+            <i class="fa fa-instagram fa-2x"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://github.com/stephennaboth">
+            <i class="fa fa-github fa-2x"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.linkedin.com/in/stephen-naboth-5a4549100/">
+            <i class="fa fa-linkedin fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+      <br><br>
+      <p>👋 Hi! I'm a PhD student in [your field] at [your university]. 
+      My research focuses on [brief description of your research]. I'm passionate about
+      [your interests/specialties].</p>
+      <!-- For the landing section buttons -->
+      <div class="button-container">
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Contact</a>
+      </div>
+    </div>
+    
+  </header>
+
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.6/tsparticles.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- =======================  DESCRIPTION SECTION ======================= -->
+
+  <section id="description" class="bg-light">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 text-center">
+          <img class="img-fluid" src="img/team/Naboth_profile_update.png" alt="Stephen Naboth profile picture"
+            style="margin-bottom: 30px">
+        </div>
+        <div class="col-lg-8 text-center text-md-left">
+          <h2 class="section-heading text-uppercase">About Me</h2>
+          <p>Hi, I'm Stephen.</p>
+          <p>My research focuses on [Your Research Area]. 
+            I'm particularly interested in [specific aspects of your work] and their applications in [relevant field/industry].
+          </p>
+          
+          <!-- For the description section buttons -->
+          <div class="button-container">
+            <a class="btn btn-secondary btn-l text-uppercase js-scroll-trigger" href="#publications">Publications</a>
+            <a class="btn btn-secondary btn-l text-uppercase js-scroll-trigger" href="https://github.com/stephennaboth">Github</a>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="row hide-if-small-screen" style="padding-top: 5%">
+        <div class="col-12 text-center" style="overflow-x: auto;">
+          <svg width="1000" height="110">
+            <line x1="0" y1="50" x2="1000" y2="50" style="stroke:black; stroke-width:1.5" />
+
+            <!-- First point: BSc -->
+            <circle cx="200" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+            <text text-anchor="middle" x="200" y="80" fill="black">2018</text>
+            <text font-size="13" text-anchor="middle" x="200" y="30" fill="black">B.Sc. Mathematics</text>
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="200" y="100" fill="#808080">University of Nairobi</text>
+
+            <!-- Second point: MSc -->
+            <circle cx="500" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+            <text text-anchor="middle" x="500" y="80" fill="black">2022</text>
+            <text font-size="13" text-anchor="middle" x="500" y="30" fill="black">M.Sc. Mathematical Modelling</text>
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="500" y="100" fill="#808080">University of L'Aquila</text>
+
+            <!-- Third point: PhD -->
+            <circle cx="800" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+            <text text-anchor="middle" x="800" y="80" fill="black">Present</text>
+            <text font-size="13" text-anchor="middle" x="800" y="30" fill="black">PhD Student</text>
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="800" y="100" fill="#808080">Rice University</text>
+
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================================= -->
+
+
+
+
+
+
+
+
+
+
+
+  <!-- =======================  RESEARCH SECTION ======================= -->
+
+  <section id="services" class="bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Research Interests</h2>
+          <h3 class="section-subheading text-muted">
+            My research focuses on mathematical modeling and scientific computing
+          </h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Scientific Computing</h4>
+          <p class="text-muted">Development of efficient numerical methods and algorithms for solving complex mathematical problems.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-line-chart fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Mathematical Modeling</h4>
+          <p class="text-muted">Developing mathematical models to understand complex physical phenomena and solve real-world problems.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Machine Learning</h4>
+          <p class="text-muted">Applying machine learning techniques to enhance mathematical models and solve optimization problems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================================= -->
+
+
+
+  <!-- =======================  PUBLICATIONS SECTION ======================= -->
+  <section id="publications" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="section-heading text-uppercase text-center">Publications</h2>
+          <h3 class="section-subheading text-muted text-center">Recent Academic Publications</h3>
+          
+          <div class="publications-list">
+            <!-- Each publication in a card-like format -->
+            
+
+            <div class="publication-item">
+              <p class="publication-text">
+                Naboth, S. (2022). "A new approach for automatic defect detection via thermal image processing and deep learning tools" 
+                <em>ResearchGate</em>, 12, 78-95. 
+                <a href="https://doi.org/10.13140/RG.2.2.26735.55201" target="_blank">DOI: 10.13140/RG.2.2.26735.55201</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================================= -->
+
+
+
+
+
+
+
+
+  <!-- ======================= CONTACT SECTION =============================== -->
+
+  <section id="contact" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="section-heading text-uppercase">Contact</h2>
+          <p>Feel free to contact me for any questions about my research or potential collaborations. 
+             You can reach me at 
+          </p>
+          <div class="button-container">
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" 
+               href="https://github.com/stephennaboth">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" 
+               href="mailto:stephennaboth@gmail.com">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <!-- ======================== MAP SECTION ============================ -->
+
+  <style>
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 300px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
+      background-color: grey;
+      opacity: 1
+    }
+  </style>
+  <!-- center: { lat: 43.61092, lng: 3.87723 } -->
+
+  <!--The div element for the map -->
+  <div id="map"></div>
+  <script>
+    var mymap = L.map('map').setView([29.7604, -95.3698], 12);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoiaG9sdHp5YW4iLCJhIjoiY2tmczBrd3BrMGJodDJ0bXQ5aW9sZXJ6eCJ9.8zTEkfZ54u4TvDGNjNh-Cg'
+    }).addTo(mymap);
+    var marker = L.marker([29.7604, -95.3698]).addTo(mymap);
+  </script>
+
+
+
+
+
+
+  <!-- ======================= FOOTER SECTION ================================ -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; Stephen Naboth 2024</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="https://github.com/stephennaboth" aria-label="Github">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/stephen-naboth-5a4549100/" aria-label="LinkedIn">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="mailto:stephennaboth@gmail.com" aria-label="Email">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================= -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <!-- ======================== JAVASCRIPT SECTION =========================== -->
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/tsParticles.min.js"></script>
+
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-79254642-3');
+  </script>
+
+
+
+
+
+  <!-- ======================================================================= -->
+
+  <!-- Add this right before the closing </body> tag -->
+  <script>
+  tsParticles.load("particles-js", {
+    particles: {
+      number: {
+        value: 80,  // Increase number of particles
+        density: {
+          enable: true,
+          value_area: 1000
+        }
+      },
+      color: {
+        value: "#007bff" // Changed from #69b3a2 to #007bff
+      },
+      shape: {
+        type: "circle"
+      },
+      opacity: {
+        value: 0.5,
+        random: true,
+        animation: {
+          enable: true,
+          speed: 1.5,  // Faster opacity animation
+          minimumValue: 0.1,
+          sync: false
+        }
+      },
+      size: {
+        value: 6,  // Larger base size
+        random: true,
+        animation: {
+          enable: true,
+          speed: 3,  // Faster size animation
+          minimumValue: 1,  // Larger minimum size
+          sync: false
+        }
+      },
+      links: {
+        enable: true,
+        distance: 200,  // Longer connection lines
+        color: "#007bff", // Changed from #69b3a2 to #007bff
+        opacity: 0.3,  // Slightly more subtle lines
+        width: 1.5  // Thicker lines
+      },
+      move: {
+        enable: true,
+        speed: 1.5,  // Slightly slower movement for better visual
+        direction: "none",
+        random: true,
+        straight: false,
+        outModes: {
+          default: "bounce"
+        }
+      }
+    },
+    interactivity: {
+      detectsOn: "canvas",
+      events: {
+        onHover: {
+          enable: true,
+          mode: "bubble"
+        },
+        resize: true
+      },
+      modes: {
+        bubble: {
+          distance: 200,
+          size: 12,  // Larger hover effect
+          duration: 0.8  // Longer hover effect duration
+        }
+      }
+    },
+    background: {
+      color: "#ffffff"
+    }
+  });
+  </script>
+</body>
+
+</html>

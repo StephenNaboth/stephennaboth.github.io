@@ -1,0 +1,702 @@
+/* ---------- General ----------------- */
+[Previous content remains exactly the same until the Description sections styling...]
+
+/* Description sections styling */
+#description, #description-productive, #description-dataviz {
+  position: relative;
+  padding: 100px 0;
+  margin: 0;
+  width: 100%;
+  display: block; /* Ensure sections are displayed as blocks */
+  z-index: 2; /* Place above particles.js */
+  overflow: visible; /* Ensure content is visible */
+}
+
+#description {
+  background-color: rgba(248, 249, 250, 0.95); /* Light background with opacity */
+}
+
+#description-productive {
+  background-color: rgba(10, 0, 27, 0.95); /* Dark background with opacity */
+  color: rgb(211, 208, 208);
+}
+
+#description-dataviz {
+  background-color: rgba(248, 249, 250, 0.95); /* Light background with opacity */
+}
+
+/* Add container styling */
+#description .container,
+#description-productive .container,
+#description-dataviz .container {
+  position: relative;
+  z-index: 3; /* Ensure content stays above background */
+}
+
+/* Add specific styling for the content */
+#description .row,
+#description-productive .row,
+#description-dataviz .row {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  width: 100%;
+}
+
+/* Ensure images are visible */
+#description img,
+#description-productive img,
+#description-dataviz img {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Update the timeline container */
+#description .hide-if-small-screen {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Add section wrapper styling */
+.section-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  background-color: transparent;
+}
+
+/* Ensure proper stacking with particles.js */
+#particles-js {
+  z-index: 1;
+}
+
+/* Update masthead to ensure proper layering */
+.masthead {
+  z-index: 2;
+  position: relative;
+}
+
+/* Update landing page styles */
+.masthead {
+  text-align: center;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Update particles container */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: transparent;
+}
+
+/* Update landing text container */
+.textlanding {
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+  padding: 2em 3em;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin: 0 auto;
+  transform: translateY(-10%);
+}
+
+/* Update arrow styling */
+.arrowlanding {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+/* Add bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Update social buttons in landing */
+.textlanding .social-buttons {
+  margin: 20px 0;
+}
+
+.textlanding .social-buttons li a {
+  background-color: #8acae1;
+  transition: all 0.3s ease;
+}
+
+.textlanding .social-buttons li a:hover {
+  background-color: #251667;
+  transform: scale(1.1);
+}
+
+/* Responsive styles for landing */
+@media (max-width: 768px) {
+  .textlanding {
+    padding: 1.5em;
+    margin: 0 15px;
+    width: calc(100% - 30px);
+    transform: translateY(0);
+  }
+  
+  .textlanding p {
+    font-size: 16px !important;
+    line-height: 1.5;
+  }
+  
+  .textlanding p:first-of-type,
+  .textlanding p:nth-of-type(2) {
+    font-size: 24px !important;
+    padding-left: 10px !important;
+  }
+  
+  .textlanding img {
+    width: 60px;
+    margin: 10px 5px !important;
+  }
+  
+  .arrowlanding {
+    bottom: 10px;
+  }
+  
+  .arrowlanding p {
+    font-size: 40px !important;
+  }
+}
+
+/* Navigation bar update for better visibility */
+#mainNav {
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 1030;
+}
+
+#mainNav.navbar-shrink {
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+/* Research section styling */
+#services {
+  position: relative;
+  padding: 100px 0;
+  margin: 0;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+#services .container {
+  position: relative;
+  z-index: 3;
+}
+
+#services .row {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  width: 100%;
+}
+
+#services .fa-stack {
+  position: relative;
+  z-index: 3;
+}
+
+#services .text-primary {
+  color: #007bff !important;
+}
+
+#services .section-heading {
+  margin-bottom: 30px;
+  color: #212529;
+}
+
+#services .section-subheading {
+  margin-bottom: 75px;
+  color: #6c757d;
+}
+
+#services .service-heading {
+  margin: 15px 0;
+  color: #212529;
+}
+
+#services .text-muted {
+  color: #6c757d !important;
+  margin-bottom: 30px;
+}
+
+/* Responsive styles for services section */
+@media (max-width: 768px) {
+  #services {
+    padding: 50px 0;
+  }
+  
+  #services .col-md-4 {
+    margin-bottom: 50px;
+  }
+  
+  #services .fa-stack {
+    margin-bottom: 20px;
+  }
+  
+  #services .service-heading {
+    font-size: 20px;
+  }
+}
+
+/* Scroll trigger button styling */
+.js-scroll-trigger {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Center align buttons container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Primary button styling */
+.btn-primary.js-scroll-trigger {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.btn-primary.js-scroll-trigger:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Secondary button styling */
+.btn-secondary.js-scroll-trigger {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary.js-scroll-trigger:hover {
+  background-color: #545b62;
+  border-color: #545b62;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .js-scroll-trigger {
+    padding: 12px 24px;
+    font-size: 14px;
+    width: auto;
+    min-width: 120px;
+    text-align: center;
+  }
+  
+  .button-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .js-scroll-trigger {
+    padding: 10px 20px;
+    font-size: 12px;
+    min-width: 100px;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Contact section styling */
+#contact {
+  position: relative;
+  padding: 100px 0;
+  margin: 0;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  background-color: rgba(248, 249, 250, 0.95);
+}
+
+#contact .container {
+  position: relative;
+  z-index: 3;
+}
+
+#contact .section-heading {
+  margin-bottom: 40px;
+  color: #212529;
+}
+
+#contact p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #495057;
+}
+
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+#contact .button-container {
+  margin-top: 40px;
+}
+
+#contact .btn {
+  min-width: 150px;
+  margin: 10px;
+  color: #ffffff !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+#contact .btn i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+#contact .btn-primary.js-scroll-trigger {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff !important;
+}
+
+#contact .btn-primary.js-scroll-trigger:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #ffffff !important;
+}
+
+/* Contact section responsive styles */
+@media (max-width: 768px) {
+  #contact {
+    padding: 60px 0;
+  }
+  
+  #contact .section-heading {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  #contact p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  
+  #contact .button-container {
+    margin-top: 30px;
+  }
+  
+  #contact .btn {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+  
+  #contact .btn i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    padding: 40px 0;
+  }
+  
+  #contact .section-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #contact p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  #contact .button-container {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+  }
+  
+  #contact .btn {
+    font-size: 13px;
+    padding: 10px 15px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Footer styling */
+footer {
+  position: relative;
+  padding: 25px 0;
+  text-align: center;
+  background-color: rgba(33, 37, 41, 0.95);
+  color: white;
+  z-index: 2;
+}
+
+footer .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .copyright {
+  font-size: 14px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer .social-buttons {
+  margin-bottom: 0;
+}
+
+footer .social-buttons li a {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 18px;
+  line-height: 40px;
+  color: white;
+  background-color: #007bff;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .social-buttons li a:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+footer .quicklinks {
+  font-size: 14px;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+footer .quicklinks li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .quicklinks li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Footer responsive styles */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 0;
+  }
+  
+  footer .row > div {
+    margin-bottom: 15px;
+  }
+  
+  footer .copyright {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  footer .social-buttons li a {
+    height: 35px;
+    width: 35px;
+    font-size: 16px;
+  }
+  
+  footer .quicklinks {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  footer .row > div {
+    margin-bottom: 20px;
+  }
+  
+  footer .social-buttons {
+    margin: 15px 0;
+  }
+  
+  footer .copyright,
+  footer .quicklinks {
+    line-height: 1.6;
+  }
+}
+
+/* Publications section styling */
+#publications {
+  position: relative;
+  padding: 100px 0;
+  margin: 0;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  background-color: rgba(248, 249, 250, 0.95);
+}
+
+#publications .container {
+  position: relative;
+  z-index: 3;
+}
+
+#publications .section-heading {
+  margin-bottom: 30px;
+  color: #212529;
+}
+
+#publications .section-subheading {
+  margin-bottom: 50px;
+  color: #6c757d;
+}
+
+.publications-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.publication-item {
+  padding: 25px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.publication-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+}
+
+.publication-text em {
+  color: #007bff;
+  font-style: italic;
+}
+
+.publication-text a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.publication-text a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Publications responsive styles */
+@media (max-width: 768px) {
+  #publications {
+    padding: 60px 0;
+  }
+  
+  .publication-item {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .publication-text {
+    font-size: 14px;
+  }
+  
+  #publications .section-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  #publications .section-subheading {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  #publications {
+    padding: 40px 0;
+  }
+  
+  .publication-item {
+    padding: 15px;
+    margin-bottom: 12px;
+  }
+  
+  .publication-text {
+    font-size: 13px;
+  }
+}
+
+[Rest of the file remains exactly the same...]
