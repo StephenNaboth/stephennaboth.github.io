@@ -4,7 +4,7 @@ Welcome to my personal website repository! This website serves as a portfolio an
 
 ## About Me
 
-I'm a PhD student in Computational Mathematics and Operations Research at Rice University in Houston, TX, USA. My research focuses on Kernel Methods on Partial Differential Equations.
+I'm a PhD student in Computational Mathematics and Operations Research at Rice University in Houston, TX, USA. Currently, my research focuses on Kernel Methods on Partial Differential Equations.
 
 ## Website Content
 
