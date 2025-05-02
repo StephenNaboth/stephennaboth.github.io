@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merger</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto">
+            <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">PDF Merger Tool</h1>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <form action="/merge" class="dropzone" id="pdfDropzone">
+                    <div class="dz-message" data-dz-message>
+                        <div class="text-lg text-gray-600">
+                            Drop PDF files here or click to upload
+                        </div>
+                        <div class="text-sm text-gray-500 mt-2">
+                            (Only PDF files are allowed)
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="mt-6 text-center">
+                    <button id="mergeButton" 
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-200 disabled:opacity-50"
+                            disabled>
+                        Merge PDFs
+                    </button>
+                </div>
+            </div>
+            
+            <div id="fileList" class="mt-6 space-y-2"></div>
+        </div>
+    </div>
+
+    <script>
+        Dropzone.autoDiscover = false;
+        
+        const dropzone = new Dropzone("#pdfDropzone", {
+            url: "/merge",
+            acceptedFiles: ".pdf",
+            autoProcessQueue: false,
+            uploadMultiple: true,
+            parallelUploads: 100,
+            maxFiles: 100,
+            method: 'POST',
+        });
+
+        const mergeButton = document.getElementById('mergeButton');
+        const fileList = document.getElementById('fileList');
+
+        dropzone.on("addedfile", file => {
+            mergeButton.disabled = false;
+            updateFileList();
+        });
+
+        dropzone.on("removedfile", file => {
+            mergeButton.disabled = dropzone.files.length === 0;
+            updateFileList();
+        });
+
+        function updateFileList() {
+            fileList.innerHTML = '';
+            dropzone.files.forEach((file, index) => {
+                const div = document.createElement('div');
+                div.className = 'bg-white rounded-lg shadow p-3 flex justify-between items-center';
+                div.innerHTML = `
+                    <span class="text-gray-700">${index + 1}. ${file.name}</span>
+                    <button onclick="removeFile(${index})" class="text-red-500 hover:text-red-600">
+                        Remove
+                    </button>
+                `;
+                fileList.appendChild(div);
+            });
+        }
+
+        function removeFile(index) {
+            dropzone.removeFile(dropzone.files[index]);
+        }
+
+        mergeButton.addEventListener('click', () => {
+            if (dropzone.files.length > 0) {
+                dropzone.processQueue();
+            }
+        });
+
+        dropzone.on("success", (file, response) => {
+            // Reset the dropzone after successful merge
+            dropzone.removeAllFiles();
+            mergeButton.disabled = true;
+        });
+
+        dropzone.on("error", (file, errorMessage) => {
+            alert(errorMessage.error || "An error occurred while merging PDFs");
+        });
+    </script>
+</body>
+</html> 
