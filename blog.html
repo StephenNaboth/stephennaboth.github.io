@@ -42,6 +42,7 @@
     <!-- Include tsparticles library -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
+
     <style>
       /* Add this style section in the head or your CSS file */
       .social-buttons {
@@ -77,6 +78,137 @@
       /* Override any existing color styles */
       .list-inline-item a i.fa-github {
         color: white !important;
+      }
+
+      /* Markdown content styling */
+      .markdown-content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Roboto Slab', 'Droid Serif', serif;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      .markdown-content h1 {
+        font-size: 2.5em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        color: #212529;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 0.3em;
+      }
+
+      .markdown-content h2 {
+        font-size: 2em;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        color: #343a40;
+      }
+
+      .markdown-content h3 {
+        font-size: 1.5em;
+        margin-top: 1.2em;
+        margin-bottom: 0.4em;
+        color: #495057;
+      }
+
+      .markdown-content p {
+        margin-bottom: 1em;
+        text-align: justify;
+      }
+
+      .markdown-content code {
+        background-color: #f4f4f4;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9em;
+        color: #e83e8c;
+      }
+
+      .markdown-content pre {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 15px;
+        overflow-x: auto;
+        margin: 1.5em 0;
+      }
+
+      .markdown-content pre code {
+        background-color: transparent;
+        padding: 0;
+        color: #333;
+      }
+
+      .markdown-content blockquote {
+        border-left: 4px solid #007bff;
+        padding-left: 1em;
+        margin-left: 0;
+        color: #6c757d;
+        font-style: italic;
+      }
+
+      .markdown-content ul, .markdown-content ol {
+        margin-bottom: 1em;
+        padding-left: 2em;
+      }
+
+      .markdown-content li {
+        margin-bottom: 0.5em;
+      }
+
+      .markdown-content a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .markdown-content a:hover {
+        text-decoration: underline;
+      }
+
+      .markdown-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin: 1.5em 0;
+      }
+
+      .markdown-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5em 0;
+      }
+
+      .markdown-content table th,
+      .markdown-content table td {
+        border: 1px solid #dee2e6;
+        padding: 0.75em;
+        text-align: left;
+      }
+
+      .markdown-content table th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+      }
+
+      /* Blog post card styling */
+      .blog-post-card {
+        cursor: pointer;
+      }
+
+      .blog-post-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15) !important;
+      }
+
+      .blog-post-card-title {
+        transition: color 0.3s ease;
+      }
+
+      .blog-post-card:hover .blog-post-card-title {
+        color: #007bff;
       }
     </style>
 
@@ -124,18 +256,18 @@
       <br>
       <ul class="list-inline social-buttons">
         <li class="list-inline-item">
-          <a href="[your Twitter URL]">
-            <i class="fa fa-twitter fa-2x"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="[your GitHub URL]">
+          <a href="https://github.com/stephennaboth">
             <i class="fa fa-github fa-2x"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a href="[your LinkedIn URL]">
+          <a href="https://www.linkedin.com/in/stephen-naboth-5a4549100/">
             <i class="fa fa-linkedin fa-2x"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="mailto:stephennaboth@gmail.com">
+            <i class="fa fa-envelope fa-2x"></i>
           </a>
         </li>
       </ul>
@@ -170,15 +302,54 @@
     <section id="blog" style="padding-top: 3%; padding-bottom: 3%">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-left" style="padding-bottom: 4%">
-            <a href="blog/genericArticle.html"><p class="blogtitle">Generic Article Title - A classification of topics based on input format</p></a>
-            <p class="blogfeature">Month Year - X minutes read</p>
-            <p class="blogtext">I’m delighted to announce a new project called <a href="https://www.generic-link.com">Generic Link</a>. It is a classification of types based on input format. It comes in the form of a decision tree leading to a set of potentially appropriate representations to convey the information.<span class="blogreadmore"> - <a href="blog/genericArticle.html">Read more</a></span></p>
+          <div class="col-lg-12">
+            <h2 class="section-heading text-uppercase text-center" style="margin-bottom: 3em;">Recent Blog Posts</h2>
+          </div>
+        </div>
+        
+        <div class="row">
+          <!-- Blog Post 1: KANNS Neural Networks -->
+          <div class="col-lg-12" style="margin-bottom: 3em;">
+            <div class="blog-post-card" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 2em; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.1)'">
+              <a href="blog/posts/kanns-neural-networks.html" style="text-decoration: none; color: inherit;">
+                <h3 class="blog-post-card-title" style="font-size: 2em; color: #212529; margin-bottom: 0.5em;">
+                  Understanding Kolmogorov-Arnold Networks (KANs): A Mathematical Deep Dive
+                </h3>
+              </a>
+              <div class="blog-post-card-meta" style="color: #6c757d; font-size: 0.9em; margin-bottom: 1em;">
+                <span><i class="fa fa-calendar"></i> January 2025</span> | 
+                <span><i class="fa fa-clock-o"></i> 15 min read</span> | 
+                <span><i class="fa fa-tags"></i> Neural Networks, Deep Learning, Mathematical Modeling</span>
+              </div>
+              <p class="blog-post-card-excerpt" style="color: #495057; line-height: 1.8; margin-bottom: 1.5em;">
+                Kolmogorov-Arnold Networks (KANs) represent a revolutionary approach to neural network architecture, drawing inspiration from the Kolmogorov-Arnold representation theorem. Unlike traditional Multi-Layer Perceptrons (MLPs) that use fixed activation functions on nodes, KANs place learnable activation functions on edges, fundamentally changing how neural networks learn and represent functions. This post provides a comprehensive mathematical deep dive into KANs, exploring their theoretical foundations, architecture details, training procedures, and advantages over traditional MLPs.
+              </p>
+              <a href="blog/posts/kanns-neural-networks.html" class="btn btn-primary btn-xl text-uppercase">
+                Read More <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
 
-          
-
-
+          <!-- Blog Post 2: Generic Article (Example) -->
+          <div class="col-lg-12" style="margin-bottom: 3em;">
+            <div class="blog-post-card" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 2em; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.1)'">
+              <a href="blog/genericArticle.html" style="text-decoration: none; color: inherit;">
+                <h3 class="blog-post-card-title" style="font-size: 2em; color: #212529; margin-bottom: 0.5em;">
+                  Generic Article Title - A classification of topics based on input format
+                </h3>
+              </a>
+              <div class="blog-post-card-meta" style="color: #6c757d; font-size: 0.9em; margin-bottom: 1em;">
+                <span><i class="fa fa-calendar"></i> Month Year</span> | 
+                <span><i class="fa fa-clock-o"></i> X minutes read</span>
+              </div>
+              <p class="blog-post-card-excerpt" style="color: #495057; line-height: 1.8; margin-bottom: 1.5em;">
+                I'm delighted to announce a new project called <a href="https://www.generic-link.com">Generic Link</a>. It is a classification of types based on input format. It comes in the form of a decision tree leading to a set of potentially appropriate representations to convey the information.
+              </p>
+              <a href="blog/genericArticle.html" class="btn btn-primary btn-xl text-uppercase">
+                Read More <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -364,7 +535,9 @@
     <script>
     $(function () {
       $('[data-toggle="tooltip"]').tooltip();
+    });
     </script>
+
 
 
 

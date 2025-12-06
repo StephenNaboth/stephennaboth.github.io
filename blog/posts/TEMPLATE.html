@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TG12LZJCTZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TG12LZJCTZ');
+    </script>
+
+    <meta charset="utf-8">
+    <title>YOUR BLOG POST TITLE | Stephen Naboth's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="YOUR BLOG POST DESCRIPTION">
+    <meta name="keywords" content="YOUR, KEYWORDS, HERE">
+    <meta name="author" content="Stephen Naboth">
+
+    <!-- Control appearance when shared by social media -->
+    <meta property="og:title" content="YOUR BLOG POST TITLE" />
+    <meta property="og:image" content="../../img/logo/logo.png" />
+    <meta property="og:description" content="YOUR BLOG POST DESCRIPTION" />
+    <meta property='og:url' content="https://stephennaboth.github.io/blog/posts/YOUR-FILE-NAME.html" />
+    <meta property="og:type" content="article" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../../css/agency.css" rel="stylesheet">
+
+    <!-- Markdown rendering library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- MathJax for rendering mathematical equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          processEnvironments: true
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+      };
+    </script>
+
+    <style>
+      /* Markdown content styling */
+      .markdown-content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Roboto Slab', 'Droid Serif', serif;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      .markdown-content h1 {
+        font-size: 2.5em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        color: #212529;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 0.3em;
+      }
+
+      .markdown-content h2 {
+        font-size: 2em;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        color: #343a40;
+      }
+
+      .markdown-content h3 {
+        font-size: 1.5em;
+        margin-top: 1.2em;
+        margin-bottom: 0.4em;
+        color: #495057;
+      }
+
+      .markdown-content p {
+        margin-bottom: 1em;
+        text-align: justify;
+      }
+
+      .markdown-content code {
+        background-color: #f4f4f4;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9em;
+        color: #e83e8c;
+      }
+
+      .markdown-content pre {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 15px;
+        overflow-x: auto;
+        margin: 1.5em 0;
+      }
+
+      .markdown-content pre code {
+        background-color: transparent;
+        padding: 0;
+        color: #333;
+      }
+
+      .markdown-content blockquote {
+        border-left: 4px solid #007bff;
+        padding-left: 1em;
+        margin-left: 0;
+        color: #6c757d;
+        font-style: italic;
+      }
+
+      .markdown-content ul, .markdown-content ol {
+        margin-bottom: 1em;
+        padding-left: 2em;
+      }
+
+      .markdown-content li {
+        margin-bottom: 0.5em;
+      }
+
+      .markdown-content a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .markdown-content a:hover {
+        text-decoration: underline;
+      }
+
+      .markdown-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin: 1.5em 0;
+      }
+
+      .markdown-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5em 0;
+      }
+
+      .markdown-content table th,
+      .markdown-content table td {
+        border: 1px solid #dee2e6;
+        padding: 0.75em;
+        text-align: left;
+      }
+
+      .markdown-content table th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+      }
+
+      /* Math equation styling */
+      .markdown-content .MathJax {
+        font-size: 1.1em;
+      }
+
+      .blog-post {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin: 2em auto;
+        padding: 2em;
+        max-width: 1000px;
+      }
+
+      .blog-post-header {
+        border-bottom: 2px solid #e9ecef;
+        padding-bottom: 1em;
+        margin-bottom: 2em;
+      }
+
+      .blog-post-title {
+        font-size: 2.5em;
+        color: #212529;
+        margin-bottom: 0.5em;
+      }
+
+      .blog-post-meta {
+        color: #6c757d;
+        font-size: 0.9em;
+      }
+
+      .back-to-blog {
+        margin: 2em 0;
+        padding: 1em;
+      }
+    </style>
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a href="../../blog.html">
+          &larr; BACK TO BLOG
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="../../blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <section id="blog-post" style="padding-top: 10%; padding-bottom: 5%">
+      <div class="container">
+        <div class="blog-post">
+          <div class="blog-post-header">
+            <h1 class="blog-post-title">YOUR BLOG POST TITLE</h1>
+            <div class="blog-post-meta">
+              <span><i class="fa fa-calendar"></i> MONTH YEAR</span> | 
+              <span><i class="fa fa-clock-o"></i> X min read</span> | 
+              <span><i class="fa fa-tags"></i> Tag1, Tag2, Tag3</span>
+            </div>
+          </div>
+          
+          <div class="markdown-content" id="blog-content">
+            <!-- Markdown content will be rendered here -->
+          </div>
+
+          <div class="back-to-blog text-center">
+            <a href="../../blog.html" class="btn btn-primary btn-xl text-uppercase">
+              <i class="fa fa-arrow-left"></i> Back to Blog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; Stephen Naboth 2024</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://github.com/stephennaboth">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/stephen-naboth-5a4549100/">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:stephennaboth@gmail.com">
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../../js/agency.min.js"></script>
+
+    <!-- Markdown content for blog post -->
+    <script>
+      // YOUR BLOG POST CONTENT IN MARKDOWN FORMAT
+      // Write your content here using Markdown syntax
+      // Use $...$ for inline math and $$...$$ for display math
+      const blogMarkdown = `# Your Introduction
+
+Write your blog post content here using Markdown syntax.
+
+## Section 1
+
+You can include mathematical equations:
+
+Inline math: $E = mc^2$
+
+Display math:
+
+$$\\int_{-\\infty}^{\\infty} e^{-x^2} dx = \\sqrt{\\pi}$$
+
+### Subsection
+
+- Bullet points
+- More points
+- Even more
+
+## Code Examples
+
+You can include code blocks:
+
+\\\`\\\`\\\`python
+def hello_world():
+    print("Hello, World!")
+\\\`\\\`\\\`
+
+## Tables
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Data 1   | Data 2   | Data 3   |
+
+## Conclusion
+
+Wrap up your blog post here.`;
+
+      // Render markdown to HTML
+      document.addEventListener('DOMContentLoaded', function() {
+        const contentDiv = document.getElementById('blog-content');
+        if (contentDiv) {
+          // Configure marked options
+          marked.setOptions({
+            breaks: true,
+            gfm: true,
+            headerIds: true,
+            mangle: false
+          });
+          
+          // Convert markdown to HTML
+          contentDiv.innerHTML = marked.parse(blogMarkdown);
+          
+          // Trigger MathJax rendering after markdown is processed
+          if (window.MathJax) {
+            MathJax.typesetPromise([contentDiv]).then(function() {
+              console.log('MathJax rendering complete');
+            }).catch(function(err) {
+              console.error('MathJax rendering error:', err);
+            });
+          }
+        }
+      });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-79254642-3');
+    </script>
+
+  </body>
+</html>
+
