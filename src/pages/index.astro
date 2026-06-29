@@ -1,0 +1,206 @@
+---
+import Base from "../layouts/Base.astro";
+
+// ============================================================
+// Content for Stephen Naboth's portfolio. The UI / styling is
+// unchanged — only the copy below was swapped in.
+// Replace these as needed:
+//   - email below (contact links)
+//   - public/Stephen_Naboth_CV.pdf  (CV download)
+//   - public/profile.jpg            (hero photo)
+// ============================================================
+const email = "stephennaboth@gmail.com";
+const github = "https://github.com/stephennaboth";
+---
+
+<Base
+  title="Stephen Naboth — PhD Candidate, Computational & Applied Mathematics & Operations Research"
+  description="PhD Candidate at Rice University working on mathematical optimization, AI, and scientific computing for energy, finance, and engineering."
+>
+  <div class="wrap">
+    <nav class="fade-in">
+      <span class="brand">
+        <span class="mark">s</span>
+        <span class="name">Stephen Naboth</span>
+      </span>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+        <a class="gh" href={github}>GitHub &#8599;</a>
+      </div>
+    </nav>
+
+    <header class="hero fade-in">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">PhD Candidate &middot; Computational &amp; Applied Mathematics &amp; Operations Research</p>
+          <h1>Stephen <em>Naboth</em></h1>
+          <p class="lede">
+            Developing optimization algorithms, AI systems, and decision-support
+            methods for complex real-world problems in energy, finance, and
+            engineering.
+          </p>
+          <p class="lede lede-small">Mathematical optimization &middot; Artificial intelligence &middot; Scientific computing</p>
+          <div class="cta-row">
+            <a class="link-arrow" href="/Stephen_Naboth_CV.pdf" download>Download CV &rarr;</a>
+            <a class="link-arrow" href={`mailto:${email}`}>Contact me &rarr;</a>
+          </div>
+        </div>
+
+        <figure class="figure">
+          <span class="figlabel">Stephen Naboth</span>
+          <img
+            src="/profile.jpg"
+            alt="Portrait of Stephen Naboth"
+            style="display:block;width:100%;height:auto;border-radius:4px;"
+          />
+          <span class="figval">Rice University</span>
+        </figure>
+      </div>
+
+      <div class="strip">
+        <div class="cellitem"><span class="num">optimization</span><span class="cap">large-scale, mixed-integer &amp; nonlinear methods</span></div>
+        <div class="cellitem"><span class="num">ai systems</span><span class="cap">learning + reasoning for decision support</span></div>
+        <div class="cellitem"><span class="num">impact</span><span class="cap">energy, finance &amp; engineering problems</span></div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="sec-head">
+        <span class="mark">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about fade-in">
+        <p>
+          I am a PhD Candidate in Computational &amp; Applied Mathematics and
+          Operations Research at Rice University. My research focuses on
+          mathematical optimization, artificial intelligence, and scientific
+          computing. I develop algorithms and decision-support tools that
+          combine optimization, machine learning, and domain knowledge to
+          address challenging problems in energy systems, finance, engineering
+          design, and digital transformation.
+        </p>
+        <p>
+          Beyond research, I am interested in translating advanced analytical
+          methods into practical tools that create measurable impact. My work
+          spans optimization theory, mixed-integer nonlinear programming, AI
+          agents, fairness-aware decision making, and scientific machine
+          learning.
+        </p>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="sec-head">
+        <span class="mark">02</span>
+        <h2>Education</h2>
+      </div>
+      <div class="entries">
+        <div class="entry fade-in">
+          <span class="margin-note">2023<br />present</span>
+          <div class="entry-head">
+            <h3>Rice University</h3>
+            <span class="role">PhD &middot; Computational &amp; Applied Mathematics &amp; Operations Research</span>
+          </div>
+          <p>Research areas:</p>
+          <div class="tags">
+            <span>Mathematical Optimization</span>
+            <span>Mixed-Integer Programming</span>
+            <span>Nonlinear Optimization</span>
+            <span>Artificial Intelligence</span>
+            <span>Scientific Computing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="sec-head">
+        <span class="mark">03</span>
+        <h2>Research interests</h2>
+      </div>
+      <div class="entries">
+        <div class="entry fade-in">
+          <div class="entry-head">
+            <h3>Mathematical Optimization</h3>
+          </div>
+          <p>
+            Developing efficient algorithms for large-scale optimization
+            problems, including mixed-integer, nonlinear, and stochastic
+            optimization.
+          </p>
+        </div>
+
+        <div class="entry fade-in">
+          <div class="entry-head">
+            <h3>Artificial Intelligence &amp; Machine Learning</h3>
+          </div>
+          <p>
+            Building intelligent systems that combine reasoning, learning, and
+            optimization for decision support and automation.
+          </p>
+        </div>
+
+        <div class="entry fade-in">
+          <div class="entry-head">
+            <h3>Scientific Computing</h3>
+          </div>
+          <p>
+            Designing computational methods for simulation, modeling, and
+            data-driven scientific discovery.
+          </p>
+        </div>
+
+        <div class="entry fade-in">
+          <div class="entry-head">
+            <h3>Operations Research</h3>
+          </div>
+          <p>
+            Applying analytical techniques to improve decision-making in complex
+            systems across industry and public sectors.
+          </p>
+        </div>
+
+        <div class="entry fade-in">
+          <div class="entry-head">
+            <h3>Energy Systems</h3>
+          </div>
+          <p>
+            Optimization and planning methods for reliable, efficient, and
+            sustainable energy infrastructure.
+          </p>
+        </div>
+
+        <div class="entry fade-in">
+          <div class="entry-head">
+            <h3>Finance &amp; Analytics</h3>
+          </div>
+          <p>
+            Quantitative models for risk analysis, forecasting, portfolio
+            optimization, and financial decision-making.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="closing fade-in">
+      <p class="ps">get in touch</p>
+      <h2>Always happy to discuss research, collaborations, or opportunities.</h2>
+      <div class="cta-row">
+        <span class="snippet">
+          <span><span class="dollar">&gt;</span> {email}</span>
+          <button class="copy" type="button" data-copy={email}>copy</button>
+        </span>
+        <a class="link-arrow" href="/Stephen_Naboth_CV.pdf" download>Download CV &rarr;</a>
+        <a class="link-arrow" href={github}>GitHub &rarr;</a>
+      </div>
+    </section>
+
+    <footer>
+      <span>&copy; 2026 Stephen Naboth</span>
+      <span>Rice University</span>
+    </footer>
+  </div>
+</Base>

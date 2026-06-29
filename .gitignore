@@ -1,0 +1,13 @@
+# build output
+dist/
+# generated types / cache
+.astro/
+# dependencies
+node_modules/
+# logs
+npm-debug.log*
+# os / editor
+.DS_Store
+
+# local source photo (the published copy lives in public/profile.jpg)
+profile_photo/
