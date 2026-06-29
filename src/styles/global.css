@@ -1,27 +1,28 @@
 /* ===========================================================
-   PORTFOLIO — "field notes" editorial theme
-   A notebook/journal look: a true two-axis grid (not just
-   ruled lines), a red margin rule, marginalia annotations next
-   to each project, and a bordered figure panel in the hero.
+   PORTFOLIO — "engineering paper" scholarly theme
+   A crisp white ground with a faint blue grid, a red margin
+   rule, a bordered figure panel in the hero, and a gridded
+   research list. Typeset in Spectral / Space Grotesk / JetBrains
+   Mono for an academic, mathematical feel.
    =========================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
-  --paper: #f8f4ea;
-  --grid: #e4dac0;
-  --grid-strong: #d5c8a4;
-  --ink: #1d1a14;
-  --ink-soft: #6e6453;
-  --accent: #a8341f;
-  --accent-soft: #c9a227;
-  --card: #fffdf7;
+  --paper: #ffffff;
+  --grid: #dce4f2;
+  --grid-strong: #c9d6ee;
+  --ink: #13213c;
+  --ink-soft: #54607a;
+  --accent: #1b3fa0;
+  --accent-soft: #d6435b;
+  --card: #fbfcfe;
 
-  --serif: "Newsreader", Georgia, serif;
-  --sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --serif: "Spectral", Georgia, serif;
+  --sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
 
-  --cell: 26px;
+  --cell: 28px;
   --maxw: 1080px;
 }
 
@@ -51,8 +52,8 @@ body::before {
   top: 0; bottom: 0;
   left: calc(var(--cell) * 3 + 1px);
   width: 1.5px;
-  background: var(--accent);
-  opacity: 0.45;
+  background: var(--accent-soft);
+  opacity: 0.5;
   pointer-events: none;
   z-index: 1;
 }
@@ -74,7 +75,7 @@ a { color: inherit; text-decoration: none; }
 .eyebrow {
   font-family: var(--mono);
   font-size: 12.5px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-soft);
 }
@@ -126,13 +127,13 @@ h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
 .copy {
   font-family: var(--sans); font-size: 11.5px; font-weight: 600;
   letter-spacing: 0.04em; text-transform: uppercase;
-  background: rgba(255,255,255,.1); color: var(--paper);
-  border: 1px solid rgba(255,255,255,.25); border-radius: 3px;
+  background: rgba(255,255,255,.12); color: var(--paper);
+  border: 1px solid rgba(255,255,255,.28); border-radius: 3px;
   padding: 4px 9px; cursor: pointer;
 }
-.copy:hover { background: rgba(255,255,255,.18); }
+.copy:hover { background: rgba(255,255,255,.22); }
 
-.link-arrow { font-size: 14.5px; color: var(--ink-soft); border-bottom: 1px solid var(--grid-strong); padding-bottom: 2px; }
+.link-arrow { font-size: 14.5px; color: var(--ink-soft); border-bottom: 1px solid var(--grid-strong); padding-bottom: 2px; transition: color .15s, border-color .15s; }
 .link-arrow:hover { color: var(--accent); border-color: var(--accent); }
 
 .figure {
@@ -140,7 +141,7 @@ h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
   background: var(--card);
   border: 1px solid var(--grid-strong);
   border-radius: 6px;
-  box-shadow: 0 1px 0 rgba(29,26,20,0.03), 0 8px 24px -16px rgba(29,26,20,0.25);
+  box-shadow: 0 1px 0 rgba(19,33,60,0.03), 0 12px 30px -18px rgba(19,33,60,0.30);
   padding: 18px 18px 16px;
 }
 .figlabel {
@@ -177,7 +178,7 @@ h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
 }
 
 .sec-head { display: flex; align-items: baseline; gap: 12px; margin: 72px 0 28px; }
-.sec-head .mark { font-family: var(--mono); font-size: 13px; color: var(--ink-soft); }
+.sec-head .mark { font-family: var(--mono); font-size: 13px; color: var(--accent); }
 .sec-head h2 { font-family: var(--serif); font-size: 27px; font-weight: 500; margin: 0; }
 
 .entries { display: flex; flex-direction: column; gap: 0; }
@@ -198,11 +199,43 @@ h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
   width: 60px;
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--accent);
+  color: var(--accent-soft);
   line-height: 1.3;
   transform: rotate(-3deg);
 }
 @media (max-width: 860px) { .margin-note { display: none; } }
+
+/* Research interests — gridded list of fields */
+.research-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--grid-strong);
+  border-left: 1px solid var(--grid-strong);
+  font-family: var(--sans);
+}
+.research-list li {
+  position: relative;
+  padding: 18px 20px;
+  border-right: 1px solid var(--grid-strong);
+  border-bottom: 1px solid var(--grid-strong);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--card);
+  transition: color .15s, background .15s;
+}
+.research-list li::before {
+  content: "→";
+  color: var(--accent);
+  margin-right: 10px;
+  font-family: var(--mono);
+}
+.research-list li:hover { color: var(--accent); background: #fff; }
+@media (max-width: 720px) { .research-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .research-list { grid-template-columns: 1fr; } }
 
 .about { font-family: var(--sans); font-size: 16.5px; color: var(--ink); max-width: 34em; }
 .about p + p { margin-top: 14px; }
