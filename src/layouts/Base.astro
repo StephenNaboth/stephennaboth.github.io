@@ -20,6 +20,9 @@ const socialImage = new URL("/og.png", Astro.site ?? Astro.url.origin);
     <meta name="author" content="Stephen Naboth" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
     <title>{title}</title>
 
     <meta property="og:type" content={type} />
