@@ -1,0 +1,35 @@
+---
+import Post from "../../layouts/Post.astro";
+---
+
+<Post
+  title="Why variable bounds matter in mixed-integer nonlinear optimization"
+  description="A practical introduction to how stronger variable bounds improve relaxations, computation, and model reliability."
+  date="August 7, 2026"
+  isoDate="2026-08-07"
+  category="Optimization"
+  readingTime="6-minute read"
+>
+  <p class="lead">Variable bounds can look like minor bookkeeping. In mixed-integer nonlinear optimization, they are often part of the algorithm.</p>
+
+  <h2>Bounds shape the relaxation</h2>
+  <p>Global optimization methods repeatedly solve relaxations that replace difficult nonlinear relationships with tractable approximations. The quality of many of those approximations depends directly on the ranges of the variables involved. Broad bounds can produce a weak relaxation, while justified tighter bounds can make the same formulation substantially more informative.</p>
+
+  <h2>Why tighter is not automatically better</h2>
+  <p>A bound is useful only when it is valid. An aggressive but incorrect bound may remove the true optimum or make a feasible model appear infeasible. Bound tightening should therefore be treated as a mathematical inference process, not as an arbitrary numerical adjustment.</p>
+
+  <h2>Common sources of stronger bounds</h2>
+  <ul>
+    <li>Physical or operational limits from the application.</li>
+    <li>Constraint propagation through linear and nonlinear relationships.</li>
+    <li>Optimization-based bound tightening, where auxiliary problems minimize and maximize selected variables.</li>
+    <li>Incumbent solutions that provide a valid objective cutoff.</li>
+    <li>Problem-specific reformulations that expose hidden structure.</li>
+  </ul>
+
+  <h2>What to measure</h2>
+  <p>When evaluating a tightening procedure, runtime alone is incomplete. It is useful to record the reduction in bound width, the change in the root relaxation, the number of branch-and-bound nodes, the final optimality gap, and the time spent in preprocessing. A more expensive preprocessing step can still be worthwhile when it produces a much smaller search tree.</p>
+
+  <h2>A practical rule</h2>
+  <p>Start with bounds supported by the application, propagate them carefully, and measure whether additional tightening improves the complete solve. Strong bounds are most valuable when they are valid, explainable, and computationally justified.</p>
+</Post>

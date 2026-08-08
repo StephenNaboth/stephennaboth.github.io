@@ -1,0 +1,39 @@
+---
+import Post from "../../layouts/Post.astro";
+---
+
+<Post
+  title="Fairness as an optimization modeling choice"
+  description="Why fairness is not a single constraint, and how modeling choices determine which tradeoffs an optimization model can represent."
+  date="July 10, 2026"
+  isoDate="2026-07-10"
+  category="Research Notes"
+  readingTime="7-minute read"
+>
+  <p class="lead">An optimization model does not discover a universal definition of fairness. It implements a specific definition chosen by the modeler and stakeholders.</p>
+
+  <h2>Start with the decision context</h2>
+  <p>Fairness requirements depend on what is being allocated, who is affected, which outcomes can be measured, and what historical conditions shape the decision. A constraint that is appropriate for one setting may be irrelevant or harmful in another.</p>
+
+  <h2>Different definitions produce different solutions</h2>
+  <p>Fairness can be represented through parity requirements, minimum guarantees, bounded disparities, weighted objectives, or constraints that depend on the final allocation. These choices can produce different feasible regions and different tradeoffs with efficiency.</p>
+
+  <h2>Static and dynamic considerations</h2>
+  <p>A static model evaluates one decision at one point in time. A dynamic model can account for accumulated outcomes, changing needs, or repeated decisions. This matters when a locally balanced decision contributes to an unbalanced long-term result—or the reverse.</p>
+
+  <h2>Endogenous measures</h2>
+  <p>Some fairness quantities depend on the decision itself. For example, the relevant population, baseline, or comparison group may change with the allocation. Endogenous definitions can represent the application more faithfully, but they may also introduce additional nonlinear or discrete structure.</p>
+
+  <h2>Report the tradeoff honestly</h2>
+  <p>A model should make clear which fairness definition was selected, why it is appropriate, which groups and outcomes it covers, and how the choice affects other objectives. Computational sophistication cannot replace that explanation.</p>
+
+  <h2>A modeling checklist</h2>
+  <ul>
+    <li>Identify the affected stakeholders.</li>
+    <li>Define the outcome or opportunity being compared.</li>
+    <li>Explain the reference groups and baseline.</li>
+    <li>Test how alternative definitions change the solution.</li>
+    <li>Evaluate both aggregate and group-level results.</li>
+    <li>Document limitations and unresolved value judgments.</li>
+  </ul>
+</Post>

@@ -1,0 +1,23 @@
+---
+interface Props {
+  active?: "home" | "blog" | "cv";
+}
+
+const { active = "home" } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="site-header__inner page-shell">
+    <a class="site-name" href="/" aria-label="Stephen Naboth, home">Stephen Naboth</a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="/#about">About</a>
+      <a href="/#research">Research</a>
+      <a href="/#publications">Publications</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#education">Education</a>
+      <a href="/blog/" aria-current={active === "blog" ? "page" : undefined}>Blog</a>
+      <a href="/cv/" aria-current={active === "cv" ? "page" : undefined}>CV</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>

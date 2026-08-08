@@ -1,0 +1,58 @@
+---
+import Base from "../../layouts/Base.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+
+const posts = [
+  {
+    href: "/blog/why-variable-bounds-matter/",
+    date: "August 7, 2026",
+    datetime: "2026-08-07",
+    category: "Optimization",
+    readingTime: "6-minute read",
+    title: "Why variable bounds matter in mixed-integer nonlinear optimization",
+    summary: "A practical introduction to how stronger variable bounds improve relaxations, computation, and model reliability."
+  },
+  {
+    href: "/blog/reproducible-optimization-experiments/",
+    date: "July 24, 2026",
+    datetime: "2026-07-24",
+    category: "Scientific Computing",
+    readingTime: "5-minute read",
+    title: "A checklist for reproducible optimization experiments",
+    summary: "Simple habits that make computational results easier to inspect, compare, and reproduce."
+  },
+  {
+    href: "/blog/fairness-as-an-optimization-modeling-choice/",
+    date: "July 10, 2026",
+    datetime: "2026-07-10",
+    category: "Research Notes",
+    readingTime: "7-minute read",
+    title: "Fairness as an optimization modeling choice",
+    summary: "Why fairness is not a single constraint, and how modeling choices determine which tradeoffs an optimization model can represent."
+  }
+];
+---
+
+<Base title="Blog — Stephen Naboth" description="Notes by Stephen Naboth on optimization, machine learning, scientific computing, and Ph.D. research.">
+  <SiteHeader active="blog" />
+  <main id="main-content" class="page-shell interior-page">
+    <header class="interior-header">
+      <p class="kicker">Academic notebook</p>
+      <h1>Blog</h1>
+      <p>Notes on optimization, machine learning, scientific computing, and my experience as a Ph.D. student.</p>
+    </header>
+
+    <div class="post-index">
+      {posts.map((post) => (
+        <article class="post-preview">
+          <p class="post-meta"><time datetime={post.datetime}>{post.date}</time> · {post.category} · {post.readingTime}</p>
+          <h2><a href={post.href}>{post.title}</a></h2>
+          <p>{post.summary}</p>
+          <a class="text-link" href={post.href}>Read article →</a>
+        </article>
+      ))}
+    </div>
+  </main>
+  <SiteFooter />
+</Base>

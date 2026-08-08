@@ -3,9 +3,13 @@ import "../styles/global.css";
 
 interface Props {
   title: string;
-  description?: string;
+  description: string;
+  type?: "website" | "article";
 }
-const { title, description } = Astro.props;
+
+const { title, description, type = "website" } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+const socialImage = new URL("/og.png", Astro.site ?? Astro.url.origin);
 ---
 
 <!doctype html>
@@ -13,12 +17,24 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Stephen Naboth" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <title>{title}</title>
-    {description && <meta name="description" content={description} />}
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="Stephen Naboth — optimization, machine learning, and scientific computing" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <slot />
-    <script is:inline src="/script.js"></script>
   </body>
 </html>

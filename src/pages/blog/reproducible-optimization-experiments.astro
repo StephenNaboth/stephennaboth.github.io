@@ -1,0 +1,38 @@
+---
+import Post from "../../layouts/Post.astro";
+---
+
+<Post
+  title="A checklist for reproducible optimization experiments"
+  description="Simple habits that make computational optimization results easier to inspect, compare, and reproduce."
+  date="July 24, 2026"
+  isoDate="2026-07-24"
+  category="Scientific Computing"
+  readingTime="5-minute read"
+>
+  <p class="lead">A computational result is more useful when another person—and your future self—can reconstruct how it was produced.</p>
+
+  <h2>Record the complete configuration</h2>
+  <p>Save the solver name and version, parameter values, time and memory limits, number of threads, random seed, model variant, and computing environment. Default parameters can change between software releases, so “solver defaults” is rarely a complete experimental description.</p>
+
+  <h2>Keep data and code identifiable</h2>
+  <p>Each result should be traceable to an exact dataset and source revision. Stable instance names, checksums, and a recorded source-control revision help prevent accidental comparisons between different inputs or implementations.</p>
+
+  <h2>Define metrics before running</h2>
+  <ul>
+    <li>Wall-clock time and termination status.</li>
+    <li>Primal and dual bounds.</li>
+    <li>Relative and absolute optimality gaps.</li>
+    <li>Node counts, iteration counts, or other algorithm-specific work measures.</li>
+    <li>Solution quality and feasibility checks.</li>
+  </ul>
+
+  <h2>Preserve unsuccessful runs</h2>
+  <p>Timeouts, numerical failures, and infeasible results are part of the evidence. Removing them can make a method appear more reliable than it is. Store them with explicit status labels and investigate recurring patterns.</p>
+
+  <h2>Make the final table regenerable</h2>
+  <p>The figures and tables in a report should be produced from raw results by a documented script. Manual copying makes it difficult to correct mistakes or incorporate new experiments consistently.</p>
+
+  <h2>Minimum reproducibility package</h2>
+  <p>A strong minimum package contains the data or a precise data reference, source code, environment information, run configurations, raw results, and the scripts that create reported tables and figures.</p>
+</Post>

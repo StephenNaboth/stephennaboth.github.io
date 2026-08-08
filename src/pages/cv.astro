@@ -1,0 +1,83 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+---
+
+<Base title="CV — Stephen Naboth" description="Curriculum vitae for Stephen Naboth, Ph.D. student in Computational Applied Mathematics and Operations Research at Rice University.">
+  <SiteHeader active="cv" />
+  <main id="main-content" class="page-shell interior-page cv-page">
+    <header class="interior-header cv-header">
+      <div>
+        <p class="kicker">Curriculum vitae</p>
+        <h1>Stephen Naboth</h1>
+        <p>Ph.D. Student in Computational Applied Mathematics and Operations Research at Rice University.</p>
+      </div>
+      <a class="text-link" href="mailto:sn82@rice.edu">sn82@rice.edu</a>
+    </header>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <div class="education-list">
+        <article><div><h3>Rice University</h3><p>Ph.D., Computational Applied Mathematics and Operations Research</p><small>Research focus: mixed-integer nonlinear optimization, mathematical optimization, and machine learning</small></div><time>2023–Present</time></article>
+        <article><div><h3>WorldQuant University</h3><p>M.S., Financial Engineering</p></div><time>2025</time></article>
+        <article><div><h3>University of L’Aquila</h3><p>M.S., Mathematical Modelling</p></div><time>2022</time></article>
+        <article><div><h3>University of Nairobi</h3><p>B.S., Mathematics</p></div><time>2018</time></article>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Research experience</h2>
+      <div class="entry-list">
+        <article>
+          <div class="entry-heading"><div><h3>Ph.D. Researcher</h3><p>Rice University</p></div><time>2023–Present</time></div>
+          <ul>
+            <li>Develop algorithms for mixed-integer nonlinear, stochastic, and fairness-constrained optimization problems.</li>
+            <li>Design bound-tightening, convex-relaxation, cutting-plane, and decomposition methods.</li>
+            <li>Implement and benchmark methods in Python and Julia with Gurobi and SCIP.</li>
+            <li>Apply optimization and machine learning to energy systems, symbolic regression, multi-fidelity modeling, and scientific decision-making.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Publications & manuscripts</h2>
+      <div class="bibliography">
+        <article><time>In preparation</time><p><strong>Naboth, S., and I. V. Hicks.</strong> “Weighted, Dynamic, and Endogenous Fairness in Mathematical Optimization.”</p></article>
+        <article><time>2022</time><p><strong>Naboth, S.</strong> “A New Approach for Automatic Defect Detection via Thermal Image Processing and Deep Learning Tools.” Master’s thesis, University of L’Aquila.</p></article>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Professional experience</h2>
+      <div class="entry-list">
+        <article>
+          <div class="entry-heading"><div><h3>AI Engineer</h3><p>Summer Engineering Innovation Program, Rice University</p></div><time>2026–Present</time></div>
+          <p>Develop an AI-assisted scholarship platform with specialized language-model agents, document analysis, retrieval-augmented generation, and personalized application workflows.</p>
+        </article>
+        <article>
+          <div class="entry-heading"><div><h3>Data Analyst</h3><p>Medipost Pharmacy, Nairobi</p></div><time>2018–2019</time></div>
+          <p>Analyzed operational, sales, and inventory data; developed reporting dashboards; and applied forecasting methods to inventory planning.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Skills</h2>
+      <dl class="skill-list">
+        <div><dt>Programming & tools</dt><dd>Python, Julia, C++, SQL, MATLAB, R, Git, Linux, Docker, Jupyter, and LaTeX</dd></div>
+        <div><dt>Optimization</dt><dd>Gurobi, SCIP, CPLEX, mixed-integer, nonlinear, and convex optimization, decomposition, and cutting planes</dd></div>
+        <div><dt>Machine learning & data</dt><dd>PyTorch, scikit-learn, pandas, NumPy, forecasting, statistical modeling, and data visualization</dd></div>
+      </dl>
+    </section>
+
+    <section class="cv-section">
+      <h2>Leadership & service</h2>
+      <div class="entry-list">
+        <article><div class="entry-heading"><div><h3>CMOR Department Representative</h3><p>Rice University Graduate Student Association</p></div><time>2025–2026</time></div></article>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+</Base>

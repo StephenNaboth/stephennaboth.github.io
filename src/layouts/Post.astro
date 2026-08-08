@@ -1,0 +1,33 @@
+---
+import Base from "./Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  isoDate: string;
+  category: string;
+  readingTime: string;
+}
+
+const { title, description, date, isoDate, category, readingTime } = Astro.props;
+---
+
+<Base title={`${title} — Stephen Naboth`} description={description} type="article">
+  <SiteHeader active="blog" />
+  <main id="main-content" class="page-shell article-page">
+    <a class="back-link" href="/blog/">← Back to Blog</a>
+    <header class="article-header">
+      <p class="kicker">{category}</p>
+      <h1>{title}</h1>
+      <p class="article-deck">{description}</p>
+      <p class="article-meta"><time datetime={isoDate}>{date}</time><span aria-hidden="true">·</span>{readingTime}</p>
+    </header>
+    <article class="article-body">
+      <slot />
+    </article>
+  </main>
+  <SiteFooter />
+</Base>
