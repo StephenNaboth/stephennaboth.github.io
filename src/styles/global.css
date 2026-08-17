@@ -187,12 +187,6 @@ h3 {
   color: var(--muted);
 }
 
-.hero__summary {
-  max-width: 640px;
-  margin-bottom: 0;
-  font-size: 1rem;
-}
-
 .profile-links {
   display: flex;
   flex-wrap: wrap;
@@ -214,21 +208,6 @@ h3 {
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.focus-band {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 28px;
-  padding-block: 12px;
-  border-block: 1px solid var(--rule);
-  font-size: 0.94rem;
-}
-
-.focus-band strong {
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .editorial-section {
@@ -256,37 +235,13 @@ h3 {
   max-width: 720px;
 }
 
+.academic-bio p + p {
+  margin-top: 1.15em;
+}
+
 .prose p:last-child,
 .section-content > :last-child {
   margin-bottom: 0;
-}
-
-.stacked-list article,
-.entry-list article,
-.writing-list article {
-  padding-block: 14px;
-  border-top: 1px solid var(--soft-rule);
-}
-
-.stacked-list article:first-child,
-.entry-list article:first-child,
-.writing-list article:first-child {
-  padding-top: 0;
-  border-top: 0;
-}
-
-.stacked-list article:last-child,
-.entry-list article:last-child,
-.writing-list article:last-of-type {
-  padding-bottom: 0;
-}
-
-.stacked-list p,
-.entry-list p,
-.education-list p,
-.writing-list p {
-  margin-bottom: 0;
-  color: var(--muted);
 }
 
 .bibliography article {
@@ -306,9 +261,7 @@ h3 {
   padding-bottom: 0;
 }
 
-.bibliography time,
-.entry-heading time,
-.education-list time {
+.bibliography time {
   color: var(--muted);
   font-size: 0.88rem;
   white-space: nowrap;
@@ -318,67 +271,20 @@ h3 {
   margin-bottom: 0;
 }
 
-.entry-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 7px;
-}
-
-.entry-heading h3,
-.entry-heading p {
-  margin-bottom: 2px;
-}
-
-.education-list article {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 20px;
-  padding-block: 14px;
-  border-top: 1px solid var(--soft-rule);
-}
-
-.education-list article:first-child {
-  padding-top: 0;
-  border-top: 0;
-}
-
-.education-list article:last-child {
-  padding-bottom: 0;
-}
-
-.education-list h3 {
-  margin-bottom: 4px;
-}
-
-.education-list small {
-  display: block;
-  margin-top: 5px;
-  color: var(--muted);
-}
-
 .post-meta {
   margin-bottom: 8px !important;
   color: var(--muted);
   font-size: 0.84rem;
 }
 
-.writing-list h3 a,
 .post-preview h2 a {
   color: var(--text);
   text-decoration-color: var(--rule);
 }
 
-.writing-list h3 a:hover,
 .post-preview h2 a:hover {
   color: var(--link);
   text-decoration-color: currentColor;
-}
-
-.writing-list .text-link {
-  display: inline-block;
-  margin-top: 18px;
 }
 
 .text-link {
@@ -519,59 +425,6 @@ h3 {
   margin-top: 8px;
 }
 
-.cv-header {
-  display: flex;
-  max-width: none;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 36px;
-}
-
-.cv-header > div {
-  max-width: 760px;
-}
-
-.cv-section {
-  display: grid;
-  grid-template-columns: 150px minmax(0, 760px);
-  gap: 30px;
-  padding-block: 34px;
-  border-bottom: 1px solid var(--rule);
-}
-
-.cv-section h2 {
-  font-size: 1.4rem;
-}
-
-.cv-section .entry-list li + li {
-  margin-top: 6px;
-}
-
-.skill-list {
-  margin-bottom: 0;
-}
-
-.skill-list > div {
-  padding-block: 13px;
-  border-top: 1px solid var(--soft-rule);
-}
-
-.skill-list > div:first-child {
-  padding-top: 0;
-  border-top: 0;
-}
-
-.skill-list dt {
-  margin-bottom: 4px;
-  font-family: var(--serif);
-  font-weight: 600;
-}
-
-.skill-list dd {
-  margin-left: 0;
-  color: var(--muted);
-}
-
 @media (max-width: 980px) {
   .site-header__inner {
     align-items: flex-start;
@@ -623,15 +476,9 @@ h3 {
     justify-self: start;
   }
 
-  .focus-band,
-  .editorial-section,
-  .cv-section {
+  .editorial-section {
     grid-template-columns: 1fr;
     gap: 18px;
-  }
-
-  .focus-band {
-    gap: 8px;
   }
 
   .editorial-section {
@@ -642,14 +489,6 @@ h3 {
     font-size: 1.55rem;
   }
 
-  .entry-heading,
-  .cv-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .education-list article,
   .bibliography article {
     grid-template-columns: 1fr;
     gap: 8px;

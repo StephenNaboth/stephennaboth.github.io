@@ -6,6 +6,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 const email = "sn82@rice.edu";
 const github = "https://github.com/stephennaboth";
 const linkedin = "https://www.linkedin.com/in/stephennaboth/";
+const cv = "/documents/Stephen_Naboth_Resume.pdf";
 ---
 
 <Base
@@ -21,12 +22,9 @@ const linkedin = "https://www.linkedin.com/in/stephennaboth/";
         <h1 id="page-title">Stephen Naboth</h1>
         <p class="hero__role">Computational Applied Mathematics and Operations Research</p>
         <p class="hero__institution">Rice University <span aria-hidden="true">·</span> Houston, Texas</p>
-        <p class="hero__summary">
-          I develop optimization algorithms and computational methods for challenging decision problems. My work focuses on mixed-integer nonlinear optimization, mathematical optimization, machine learning, and scientific computing.
-        </p>
         <div class="profile-links" aria-label="Profile links">
           <a href={`mailto:${email}`}>Email</a>
-          <a href="/cv/">CV</a>
+          <a href={cv}>CV</a>
           <a href={github} target="_blank" rel="noreferrer">GitHub</a>
           <a href={linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
@@ -37,35 +35,30 @@ const linkedin = "https://www.linkedin.com/in/stephennaboth/";
       </figure>
     </section>
 
-    <aside class="focus-band" aria-label="Current research focus">
-      <strong>Current focus</strong>
-      <span>Mixed-integer nonlinear optimization <span aria-hidden="true">·</span> Mathematical optimization <span aria-hidden="true">·</span> Machine learning <span aria-hidden="true">·</span> Scientific computing</span>
-    </aside>
-
     <section id="about" class="editorial-section">
       <header class="section-label"><h2>About</h2></header>
-      <div class="section-content prose">
+      <div class="section-content prose academic-bio">
         <p>
-          I am a Ph.D. student in Computational Applied Mathematics and Operations Research at Rice University, advised by Professor Illya V. Hicks. My research focuses on mathematical optimization, mixed-integer nonlinear optimization, and machine learning. I develop computational methods—including bound tightening, convex relaxations, cutting planes, and decomposition—for challenging decision problems in energy systems, symbolic regression, and scientific computing.
+          I am a Ph.D. student in the <a href="https://cmor.rice.edu/" target="_blank" rel="noreferrer">Department of Computational Applied Mathematics and Operations Research</a> at Rice University, where I am advised by Professor Illya V. Hicks. My research centers on mathematical optimization, with an emphasis on mixed-integer nonlinear optimization and its connections to machine learning and scientific computing.
+        </p>
+        <p>
+          I develop computational methods for challenging decision problems, including bound tightening, convex relaxations, cutting planes, decomposition, and branch-and-bound techniques. I am particularly interested in applications involving energy systems, symbolic regression, multi-fidelity modeling, and scientific decision-making.
+        </p>
+        <p>
+          Before beginning my doctoral studies at Rice, I earned an M.S. in Financial Engineering from WorldQuant University, an M.S. in Mathematical Modelling from the University of L’Aquila, and a B.S. in Mathematics from the University of Nairobi.
+        </p>
+        <p>
+          You can view or download my <a href={cv}>CV</a>.
         </p>
       </div>
     </section>
 
     <section id="research" class="editorial-section">
       <header class="section-label"><h2>Research</h2></header>
-      <div class="section-content stacked-list">
-        <article>
-          <h3>Optimization algorithms</h3>
-          <p>Mixed-integer nonlinear, stochastic, and fairness-constrained optimization.</p>
-        </article>
-        <article>
-          <h3>Computational methods</h3>
-          <p>Bound tightening, convex relaxations, cutting planes, decomposition, and branch-and-bound methods.</p>
-        </article>
-        <article>
-          <h3>Applications</h3>
-          <p>Energy systems, symbolic regression, multi-fidelity modeling, and scientific decision-making.</p>
-        </article>
+      <div class="section-content prose">
+        <p>
+          My current research includes mixed-integer nonlinear, stochastic, and fairness-constrained optimization. Across these areas, I study how stronger formulations and tailored computational techniques can make difficult models more reliable and tractable.
+        </p>
       </div>
     </section>
 
@@ -83,66 +76,15 @@ const linkedin = "https://www.linkedin.com/in/stephennaboth/";
       </div>
     </section>
 
-    <section id="experience" class="editorial-section">
-      <header class="section-label"><h2>Experience</h2></header>
-      <div class="section-content entry-list">
-        <article>
-          <div class="entry-heading"><div><h3>Ph.D. Researcher</h3><p>Rice University</p></div><time>2023–Present</time></div>
-          <p>Develop algorithms for mixed-integer nonlinear, stochastic, and fairness-constrained optimization. Implement and benchmark computational methods using Python, Julia, Gurobi, and SCIP.</p>
-        </article>
-        <article>
-          <div class="entry-heading"><div><h3>AI Engineer</h3><p>Summer Engineering Innovation Program, Rice University</p></div><time>2026–Present</time></div>
-          <p>Develop an AI-assisted scholarship platform using specialized language-model agents, document analysis, retrieval-augmented generation, and personalized application workflows.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="education" class="editorial-section">
-      <header class="section-label"><h2>Education</h2></header>
-      <div class="section-content education-list">
-        <article><div><h3>Rice University</h3><p>Ph.D., Computational Applied Mathematics and Operations Research</p><small>Expected May 2028</small></div><time>2023–Present</time></article>
-        <article><div><h3>WorldQuant University</h3><p>M.S., Financial Engineering</p></div><time>2025</time></article>
-        <article><div><h3>University of L’Aquila</h3><p>M.S., Mathematical Modelling</p></div><time>2022</time></article>
-        <article><div><h3>University of Nairobi</h3><p>B.S., Mathematics</p></div><time>2018</time></article>
-      </div>
-    </section>
-
-    <section id="service" class="editorial-section">
-      <header class="section-label"><h2>Service</h2></header>
-      <div class="section-content entry-list">
-        <article>
-          <div class="entry-heading"><div><h3>CMOR Department Representative</h3><p>Rice University Graduate Student Association</p></div><time>2025–2026</time></div>
-          <p>Represented CMOR graduate students and supported initiatives in graduate engagement, professional development, and academic experience.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="editorial-section">
-      <header class="section-label"><h2>Writing</h2></header>
-      <div class="section-content writing-list">
-        <article>
-          <p class="post-meta"><time datetime="2026-08-07">August 7, 2026</time> · Optimization</p>
-          <h3><a href="/blog/why-variable-bounds-matter/">Why variable bounds matter in mixed-integer nonlinear optimization</a></h3>
-          <p>A practical introduction to how stronger variable bounds improve relaxations, computation, and model reliability.</p>
-        </article>
-        <article>
-          <p class="post-meta"><time datetime="2026-07-24">July 24, 2026</time> · Scientific Computing</p>
-          <h3><a href="/blog/reproducible-optimization-experiments/">A checklist for reproducible optimization experiments</a></h3>
-          <p>Simple habits that make computational results easier to inspect, compare, and reproduce.</p>
-        </article>
-        <a class="text-link" href="/blog/">View all notes →</a>
-      </div>
-    </section>
-
     <section id="contact" class="editorial-section contact-section">
       <header class="section-label"><h2>Contact</h2></header>
       <div class="section-content prose">
+        <p><strong>Email:</strong> <a href={`mailto:${email}`}>{email}</a></p>
         <p>I welcome conversations about research, collaboration, internships, and applied optimization projects.</p>
         <div class="profile-links">
-          <a href={`mailto:${email}`}>{email}</a>
           <a href={github} target="_blank" rel="noreferrer">GitHub</a>
           <a href={linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="/cv/">CV</a>
+          <a href={cv} download>Download CV</a>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 ---
 interface Props {
-  active?: "home" | "blog" | "cv";
+  active?: "home" | "blog";
 }
 
 const { active = "home" } = Astro.props;
@@ -13,10 +13,8 @@ const { active = "home" } = Astro.props;
       <a href="/#about">About</a>
       <a href="/#research">Research</a>
       <a href="/#publications">Publications</a>
-      <a href="/#experience">Experience</a>
-      <a href="/#education">Education</a>
       <a href="/blog/" aria-current={active === "blog" ? "page" : undefined}>Blog</a>
-      <a href="/cv/" aria-current={active === "cv" ? "page" : undefined}>CV</a>
+      <a href="/documents/Stephen_Naboth_Resume.pdf">CV</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
